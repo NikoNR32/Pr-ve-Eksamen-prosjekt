@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS brukere (
+    bruker_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fornavn TEXT NOT NULL,
+    etternavn TEXT NOT NULL,
+    epost TEXT NOT NULL UNIQUE,
+    brukernavn TEXT NOT NULL UNIQUE,
+    passord_hash TEXT NOT NULL,
+    opprettet_dato TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b7532c;
+    color: #222;
+}
+
+/* Header / meny */
+header {
+    background-color: #b7532c;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Søkefelt */
+.sokefelt {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.sokefelt input {
+    width: 70%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.sokefelt button {
+    padding: 14px 22px;
+    border: none;
+    background-color: #22c55e;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.sokefelt button:hover {
+    background-color: #16a34a;
+}
+
+/* Produktseksjon */
+.produkter {
+    padding: 50px 8%;
+}
+
+.produkter h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.produkt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.produkt-kort {
+    background-color: white;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produkt-kort:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.produkt-kort img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produkt-kort h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.produkt-kort p {
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.produkt-kort span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 18px;
+    color: #16a34a;
+}
+
+/* Footer */
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Mobil */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .produkt-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sokefelt {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sokefelt input,
+    .sokefelt button {
+        width: 100%;
+        border-radius: 8px;
+    }
+}

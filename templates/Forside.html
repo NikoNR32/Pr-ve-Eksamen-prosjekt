@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportbutikk</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="/">NikoSport</a>
+        </div>
+
+        <nav>
+            <a href="/">Hjem</a>
+            <a href="/produkter">Produkter</a>
+            <a href="/login">Logg inn</a>
+            <a href="/handlekurv">Handlekurv</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Velkommen til Sportbutikk</h1>
+            <p>Finn fotballsko, drakter, baller og treningsutstyr.</p>
+
+            <form action="/sok" method="GET" class="sokefelt">
+                <input 
+                    type="text" 
+                    name="q" 
+                    placeholder="Søk etter produkter..."
+                    required
+                >
+                <button type="submit">Søk</button>
+            </form>
+        </section>
+
+        <section class="produkter">
+            <h2>Populære produkter</h2>
+
+            <div class="produkt-grid">
+
+                <a href="/produkt/1" class="produkt-kort">
+                    <img src="{{ url_for('static', filename='bilder/fotballsko.jpg') }}" alt="Fotballsko">
+                    <h3>Fotballsko</h3>
+                    <p>Gode sko til kamp og trening.</p>
+                    <span>1299 kr</span>
+                </a>
+
+                <a href="/produkt/2" class="produkt-kort">
+                    <img src="{{ url_for('static', filename='bilder/fotball.jpg') }}" alt="Fotball">
+                    <h3>Fotball</h3>
+                    <p>Perfekt ball til kunstgress.</p>
+                    <span>399 kr</span>
+                </a>
+
+                <a href="/produkt/3" class="produkt-kort">
+                    <img src="{{ url_for('static', filename='bilder/drakt.jpg') }}" alt="Fotballdrakt">
+                    <h3>Fotballdrakt</h3>
+                    <p>Komfortabel drakt til trening.</p>
+                    <span>599 kr</span>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sportbutikk</p>
+    </footer>
+
+</body>
+</html>
